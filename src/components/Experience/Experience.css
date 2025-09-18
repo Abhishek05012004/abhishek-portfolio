@@ -1,0 +1,552 @@
+/* Experience.css */
+.experience {
+    background: var(--gray-50);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.experience .section-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.experience .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.experience .section-title .section-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.experience .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.experience .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.experience-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.experience-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    border-radius: 2px;
+}
+
+.experience-card {
+    position: relative;
+    margin-bottom: 60px;
+    width: 45%;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.experience-card.left {
+    left: 0;
+    padding-right: 50px;
+}
+
+.experience-card.right {
+    left: 55%;
+    padding-left: 50px;
+}
+
+.experience-content {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-200);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.experience-content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+    margin-bottom: 0;
+}
+
+.expandable-content {
+    margin-top: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.expandable-content.expanded {
+    max-height: 1000px;
+}
+
+.job-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.job-icon {
+    font-size: 1rem;
+}
+
+.job-info {
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.company-name,
+.job-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.company-icon,
+.location-icon {
+    font-size: 0.9rem;
+}
+
+.job-period {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    background: var(--gray-100);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.calendar-icon {
+    font-size: 0.8rem;
+}
+
+.job-period-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.expand-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.expand-button {
+    background: var(--gray-100);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--gray-600);
+}
+
+.expand-button:hover {
+    background: var(--gray-200);
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.job-description,
+.job-achievements {
+    margin-bottom: 25px;
+}
+
+.job-description h4,
+.job-achievements h4,
+.technologies h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.job-description ul,
+.job-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-description li,
+.job-achievements li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.job-description li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 0.7rem;
+}
+
+.job-achievements li::before {
+    content: "🎯";
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.experience-timeline {
+    position: absolute;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+}
+
+.experience-card.left .experience-timeline {
+    right: -60px;
+}
+
+.experience-card.right .experience-timeline {
+    left: -60px;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    position: relative;
+    z-index: 3;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .experience .section-title {
+        font-size: 2.5rem;
+        gap: 12px;
+    }
+
+    .experience .section-title .section-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .experience-container::before {
+        left: 20px;
+    }
+
+    .experience-card {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px !important;
+        padding-right: 0 !important;
+    }
+
+    .experience-timeline {
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    .experience-content {
+        padding: 25px 20px;
+    }
+
+    .job-title {
+        font-size: 1.4rem;
+    }
+
+    .company-details {
+        flex-direction: column;
+    }
+
+    .expandable-content.expanded {
+        max-height: 1200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience .section-title {
+        font-size: 2rem;
+        gap: 10px;
+    }
+
+    .experience .section-title .section-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .experience-container::before {
+        left: 15px;
+    }
+
+    .experience-card {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 45px !important;
+        padding-right: 0 !important;
+        margin-bottom: 40px;
+    }
+
+    .experience-timeline {
+        left: 5px !important;
+        right: auto !important;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+    }
+
+    .experience-content {
+        padding: 20px 15px;
+    }
+
+    .job-badge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .job-icon {
+        font-size: 0.9rem;
+    }
+
+    .job-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .company-name,
+    .job-location {
+        font-size: 0.9rem;
+        gap: 6px;
+    }
+
+    .company-icon,
+    .location-icon {
+        font-size: 0.8rem;
+    }
+
+    .job-period {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        gap: 6px;
+    }
+
+    .calendar-icon {
+        font-size: 0.7rem;
+    }
+
+    .job-period-container {
+        margin-top: 12px;
+    }
+
+    .expand-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .job-description h4,
+    .job-achievements h4,
+    .technologies h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+
+    .job-description li,
+    .job-achievements li {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+
+    .tech-tags {
+        gap: 6px;
+    }
+
+    .tech-tag {
+        padding: 4px 10px;
+        font-size: 0.7rem;
+    }
+
+    .expandable-content.expanded {
+        max-height: 1500px;
+    }
+}
+
+@media (max-width: 320px) {
+    .experience .section-title {
+        font-size: 1.8rem;
+        gap: 8px;
+    }
+
+    .experience .section-title .section-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .experience-container::before {
+        left: 12px;
+    }
+
+    .experience-card {
+        padding-left: 35px !important;
+    }
+
+    .experience-timeline {
+        left: 2px !important;
+    }
+
+    .timeline-dot {
+        width: 14px;
+        height: 14px;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+    }
+
+    .job-description li,
+    .job-achievements li {
+        font-size: 0.8rem;
+    }
+
+    .expandable-content.expanded {
+        max-height: 1800px;
+    }
+}
