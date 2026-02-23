@@ -191,6 +191,7 @@
         justify-content: flex-start;
         align-items: center;
         padding: 20px 0;
+        gap: 0;
         transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
         border-bottom: 1px solid var(--gray-200);
@@ -209,7 +210,7 @@
     }
 
     .nav-item {
-        margin: 8px 0;
+        margin: 2px 0;
     }
 
     .nav-link {
@@ -221,6 +222,11 @@
 
     .nav-link:hover {
         background: var(--gray-50);
+    }
+
+    [data-theme="dark"] .nav-links {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid var(--gray-800);
     }
 }
 
@@ -273,7 +279,16 @@
 
 @media (max-width: 320px) {
     .logo {
-        font-size: 18px;
+        font-size: 16px;
+        gap: 4px;
+        flex-wrap: wrap;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        min-width: 0;
+    }
+
+    .logo-icon {
+        font-size: 14px;
     }
 
     .nav-links {
@@ -294,4 +309,71 @@
     .nav-item {
         margin: 5px 0;
     }
+}
+
+/* Extreme Small Screen Adjustments strictly scoped to Navbar */
+@media (max-width: 250px) {
+    .navbar .container {
+        padding: 0 8px;
+        /* Force minimum spacing on edge of screen */
+    }
+
+    .logo {
+        font-size: 14px;
+        gap: 2px;
+        flex-wrap: wrap;
+        word-break: break-all;
+    }
+
+    .logo-icon {
+        font-size: 12px;
+        display: none;
+        /* Hide icon to preserve width */
+    }
+
+    .nav-right {
+        gap: 4px;
+    }
+
+    .theme-toggle,
+    .hamburger {
+        padding: 4px;
+    }
+
+    .hamburger span {
+        width: 16px;
+        height: 2px;
+    }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--gray-100);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(15, 23, 42, 0.98);
 }

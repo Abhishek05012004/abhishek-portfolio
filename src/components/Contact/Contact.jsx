@@ -12,6 +12,7 @@ import {
   Send,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useToast } from "../../context/ToastContext";
 import "./Contact.css";
 
 const SERVICE_ID = "service_k8kvd4p"; // e.g., "service_xxxx"
@@ -19,6 +20,7 @@ const TEMPLATE_ID = "template_ya3jbcs"; // e.g., "template_xxxx"
 const PUBLIC_KEY = "nt77tX0lrt1MQ4Rzz"; // e.g., "OAbcD_1XyZ..."
 
 const Contact = () => {
+  const { showToast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,12 +41,12 @@ const Contact = () => {
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
       .then(() => {
-        alert("Message sent successfully!");
+        showToast("Message sent successfully!", "success");
         setFormData({ name: "", email: "", subject: "", message: "" });
       })
       .catch((err) => {
         console.error("Failed to send message:", err);
-        alert("Failed to send message. Please try again later.");
+        showToast("Failed to send message. Please try again.", "error");
       });
   };
 

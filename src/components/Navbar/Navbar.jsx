@@ -1,13 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Home, User, Settings, Briefcase, FolderOpen, Mail } from "lucide-react"
+import { Home, User, Settings, Briefcase, FolderOpen, Mail, Sun, Moon } from "lucide-react"
+import { useTheme } from "../../context/ThemeContext"
 import "./Navbar.css"
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,13 +74,18 @@ const Navbar = () => {
             })}
           </ul>
 
-          <div
-            className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+          <div className="nav-right">
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
+            <div
+              className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>

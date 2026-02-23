@@ -92,6 +92,8 @@
     color: var(--gray-900);
     margin-bottom: 20px;
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .wave-emoji {
@@ -142,6 +144,8 @@
     color: var(--gray-700);
     margin-bottom: 30px;
     min-height: 50px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .typing-text {
@@ -263,7 +267,7 @@
 }
 
 .profile-card {
-    background: white;
+    background: var(--white);
     border-radius: 20px;
     padding: 40px;
     /* Increased from 30px */
@@ -272,8 +276,9 @@
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-    min-width: 320px;
-    /* Added minimum width */
+    min-width: 0;
+    width: 100%;
+    max-width: 320px;
 }
 
 .profile-card:hover {
@@ -423,7 +428,7 @@
     .profile-card {
         padding: 30px;
         /* Adjusted for mobile */
-        min-width: 280px;
+        max-width: 280px;
         /* Adjusted for mobile */
     }
 
@@ -473,7 +478,7 @@
 
     .profile-card {
         padding: 25px;
-        min-width: 250px;
+        max-width: 250px;
     }
 
     .profile-avatar {
@@ -522,7 +527,7 @@
     }
 
     .profile-card {
-        min-width: 220px;
+        max-width: 220px;
     }
 
     .profile-avatar {
