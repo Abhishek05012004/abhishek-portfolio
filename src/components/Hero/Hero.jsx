@@ -58,14 +58,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-background">
-        <div className="floating-shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-          <div className="shape shape-4"></div>
-        </div>
-      </div>
+
 
       <div className="container">
         <div className="hero-content">
@@ -79,7 +72,7 @@ const Hero = () => {
             </h2>
             <p className="hero-description">
               <Play className="rocket-emoji" size={16} />
-              Currently interning at FlyAnyTrip as a MERN Stack Developer.
+              Working as a full-time MERN Stack Developer at FlyAnyTrip (formerly Intern).
               Passionate about creating innovative web solutions and bringing
               ideas to life through code.
             </p>
@@ -119,11 +112,11 @@ const Hero = () => {
                       MERN Stack Developer
                     </p>
                     <div className="social-links">
-                      <a href="#" className="social-link">
+                      <a href="https://github.com/Abhishek05012004" className="social-link">
                         <Github className="social-icon" size={16} />
                         <span>GitHub</span>
                       </a>
-                      <a href="#" className="social-link">
+                      <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" className="social-link">
                         <Linkedin className="social-icon" size={16} />
                         <span>LinkedIn</span>
                       </a>

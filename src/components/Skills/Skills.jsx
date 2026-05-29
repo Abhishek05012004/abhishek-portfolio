@@ -39,7 +39,7 @@ const Skills = () => {
             className="tech-logo"
           />
         ),
-        description: "Advanced",
+        description: "Expert",
         color: "#61DAFB",
       },
       {
@@ -52,12 +52,12 @@ const Skills = () => {
             className="tech-logo"
           />
         ),
-        description: "Expert",
+        description: "Advanced",
         color: "#F7DF1E",
       },
       {
         name: "HTML5",
-        level: 95,
+        level: 90,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
@@ -70,7 +70,7 @@ const Skills = () => {
       },
       {
         name: "CSS3",
-        level: 90,
+        level: 85,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
@@ -83,7 +83,7 @@ const Skills = () => {
       },
       {
         name: "TypeScript",
-        level: 80,
+        level: 70,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -124,7 +124,7 @@ const Skills = () => {
       },
       {
         name: "Express.js",
-        level: 80,
+        level: 85,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/express.svg"
@@ -150,17 +150,17 @@ const Skills = () => {
         color: "#47A248",
       },
       {
-        name: "MySQL",
-        level: 75,
+        name: "PostgreSQL",
+        level: 65,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-            alt="MySQL"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
             className="tech-logo"
           />
         ),
         description: "Intermediate",
-        color: "#4479A1",
+        color: "#336791",
       },
       {
         name: "REST APIs",
@@ -177,7 +177,7 @@ const Skills = () => {
       },
       {
         name: "JWT",
-        level: 80,
+        level: 85,
         icon: (
           <img
             src="https://jwt.io/img/pic_logo.svg"
@@ -192,7 +192,7 @@ const Skills = () => {
     tools: [
       {
         name: "Git",
-        level: 85,
+        level: 80,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
@@ -202,6 +202,20 @@ const Skills = () => {
         ),
         description: "Advanced",
         color: "#F05032",
+      },
+      {
+        name: "GitHub",
+        level: 85,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub"
+            className="tech-logo"
+            style={{ filter: "invert(1)" }}
+          />
+        ),
+        description: "Advanced",
+        color: "#000000",
       },
       {
         name: "VS Code",
@@ -218,7 +232,7 @@ const Skills = () => {
       },
       {
         name: "Postman",
-        level: 80,
+        level: 85,
         icon: (
           <img
             src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
@@ -230,43 +244,31 @@ const Skills = () => {
         color: "#FF6C37",
       },
       {
-        name: "Figma",
-        level: 70,
+        name: "Vercel",
+        level: 80,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-            alt="Figma"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg"
+            alt="Vercel"
             className="tech-logo"
+            style={{ filter: "invert(1)" }}
           />
         ),
-        description: "Intermediate",
-        color: "#F24E1E",
+        description: "Advanced",
+        color: "#000000",
       },
       {
-        name: "Docker",
-        level: 65,
+        name: "ChatGPT",
+        level: 90,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-            alt="Docker"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg"
+            alt="ChatGPT"
             className="tech-logo"
           />
         ),
-        description: "Beginner",
-        color: "#2496ED",
-      },
-      {
-        name: "AWS",
-        level: 60,
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg"
-            alt="AWS"
-            className="tech-logo"
-          />
-        ),
-        description: "Beginner",
-        color: "#FF9900",
+        description: "Expert",
+        color: "#10A37F",
       },
     ],
   };

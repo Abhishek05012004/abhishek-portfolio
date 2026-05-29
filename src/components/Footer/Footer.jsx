@@ -67,19 +67,19 @@ const Footer = () => {
               </h4>
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="https://github.com/Abhishek05012004">
                     <Github className="link-icon" size={14} />
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/">
                     <Linkedin className="link-icon" size={14} />
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://x.com/Abhishek_272003">
                     <Twitter className="link-icon" size={14} />
                     Twitter
                   </a>

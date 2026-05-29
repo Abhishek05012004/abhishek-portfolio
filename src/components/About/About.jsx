@@ -32,8 +32,8 @@ const About = () => {
                   <div className="story-text">
                     <h4>My Journey</h4>
                     <p>
-                      I'm a passionate MERN Stack Developer currently interning at FlyAnyTrip, where I'm gaining
-                      hands-on experience in building scalable web applications. My journey in web development started
+                      I'm a passionate MERN Stack Developer currently working full-time at FlyAnyTrip (where I previously served as an intern), building
+                      scalable web applications and robust APIs. My journey in web development started
                       with a curiosity about how websites work, and it has evolved into a deep passion for creating
                       innovative digital solutions.
                     </p>
@@ -61,9 +61,7 @@ const About = () => {
                   <div className="story-text">
                     <h4>Beyond Coding</h4>
                     <p>
-                      When I'm not coding, you can find me exploring new technologies, contributing to open-source
-                      projects, or sharing my knowledge with the developer community. I believe in continuous learning
-                      and staying updated with the latest industry trends.
+                      When I'm not coding, you can find me exploring new technologies, designing interactive user interfaces, or learning about advanced system design. I believe in continuous learning and staying updated with the latest industry trends.
                     </p>
                   </div>
                 </div>
@@ -164,8 +162,8 @@ const About = () => {
                     <Zap size={16} />
                   </div>
                   <div className="achievement-text">
-                    <strong>Internship at FlyAnyTrip</strong>
-                    <span>Currently working on real-world projects</span>
+                    <strong>MERN Developer at FlyAnyTrip</strong>
+                    <span>Full-Time Role (previously Intern)</span>
                   </div>
                 </div>
                 <div className="achievement-item">

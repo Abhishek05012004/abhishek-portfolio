@@ -121,19 +121,19 @@ const Contact = () => {
               </div>
 
               <div className="social-links">
-                <a href="#" className="social-link github">
+                <a href="https://github.com/Abhishek05012004" className="social-link github">
                   <Github className="social-icon" size={16} />
                   <span>GitHub</span>
                 </a>
-                <a href="#" className="social-link linkedin">
+                <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" className="social-link linkedin">
                   <Linkedin className="social-icon" size={16} />
                   <span>LinkedIn</span>
                 </a>
-                <a href="#" className="social-link twitter">
+                <a href="https://x.com/Abhishek_272003" className="social-link twitter">
                   <Twitter className="social-icon" size={16} />
                   <span>Twitter</span>
                 </a>
-                <a href="#" className="social-link instagram">
+                <a href="https://www.instagram.com/abhishek_jha_7/" className="social-link instagram">
                   <Instagram className="social-icon" size={16} />
                   <span>Instagram</span>
                 </a>

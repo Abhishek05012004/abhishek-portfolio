@@ -9,6 +9,8 @@ import {
   Calendar,
   ChevronDown,
   ChevronUp,
+  BookOpen,
+  Laptop,
 } from "lucide-react";
 import { useState } from "react";
 import "./Experience.css";
@@ -26,18 +28,46 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: "MERN Stack Developer",
+      company: "FlyAnyTrip",
+      period: "Apr 2025 - Present",
+      location: "On-Site",
+      type: "Full-Time",
+      description: [
+        "Designing and implementing scalable full-stack web applications using the MERN stack",
+        "Developing and securing RESTful APIs using Node.js and Express.js",
+        "Optimizing application performance, database queries, and system reliability",
+        "Collaborating with cross-functional teams to design, build, and deploy new features",
+        "Maintaining and refactoring codebases for improved scalability and maintainability",
+      ],
+      technologies: [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JavaScript",
+        "Git",
+        "REST APIs",
+      ],
+      achievements: [
+        "Successfully transitioned from intern to full-time developer based on performance",
+        "Improved application responsiveness and key user flows",
+        "Collaborated on production deployments with zero downtime",
+      ],
+    },
+    {
       title: "MERN Stack Developer Intern",
       company: "FlyAnyTrip",
-      period: "Jan 2024 - Present",
-      location: "Remote",
+      period: "Jan 2025 - Mar 2025",
+      location: "On-Site",
       type: "Internship",
       description: [
-        "Developing and maintaining web applications using MERN stack",
-        "Building responsive user interfaces with React.js and modern CSS",
-        "Creating RESTful APIs using Node.js and Express.js",
-        "Working with MongoDB for database design and optimization",
-        "Collaborating with senior developers on client projects",
-        "Implementing authentication and authorization systems",
+        "Assisted in developing and maintaining web applications using the MERN stack",
+        "Built responsive user interfaces with React.js and modern CSS",
+        "Created RESTful APIs using Node.js and Express.js under mentorship",
+        "Worked with MongoDB for database design and basic query optimization",
+        "Collaborated with senior developers on client projects",
+        "Learned industry-standard authentication and authorization systems",
       ],
       technologies: [
         "React.js",
@@ -49,7 +79,7 @@ const Experience = () => {
         "CSS3",
       ],
       achievements: [
-        "Successfully delivered 3+ client projects",
+        "Successfully delivered all assigned client projects",
         "Improved application performance by 25%",
         "Implemented responsive designs for mobile compatibility",
       ],
@@ -124,11 +154,19 @@ const Experience = () => {
                     <h3 className="job-title">{exp.title}</h3>
                     <div className="company-details">
                       <span className="company-name">
-                        <Building className="company-icon" size={14} />
+                        {exp.company === "Self-Directed" ? (
+                          <Laptop className="company-icon" size={14} />
+                        ) : (
+                          <Building className="company-icon" size={14} />
+                        )}
                         {exp.company}
                       </span>
                       <span className="job-location">
-                        <MapPin className="location-icon" size={14} />
+                        {exp.location === "Self-Learning" ? (
+                          <BookOpen className="location-icon" size={14} />
+                        ) : (
+                          <MapPin className="location-icon" size={14} />
+                        )}
                         {exp.location}
                       </span>
                     </div>

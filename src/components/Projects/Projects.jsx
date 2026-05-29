@@ -11,7 +11,6 @@ import {
   ExternalLink,
   ArrowLeft,
   Settings,
-  Clock,
 } from "lucide-react"
 import "./Projects.css"
 
@@ -22,95 +21,203 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Biology Trunk",
       description:
-        "A comprehensive full-stack e-commerce solution featuring user authentication, product management, secure payment integration, and real-time inventory tracking with modern UI/UX design.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+        "A comprehensive online Learning Management System (LMS) tailored for competitive biology preparation (NEET, TGT/PGT, Boards). Features student, faculty, and admin dashboards, dynamic course creation, Razorpay payment integration, enrollment management, and automated PDF receipt generation.",
+      image: "/biology-trunk-logo.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "Razorpay",
+      ],
       category: "fullstack",
-      github: "#",
-      live: "#",
-      liveUrl: "https://example-ecommerce.com",
-      demoType: "ecommerce",
+      github: "https://github.com/W3BOPERATIONS/biology-trunk-client",
+      live: "https://biologytrunk.in/",
+      liveUrl: "https://biologytrunk.in/",
+      demoType: "education",
       status: "Completed",
-      duration: "3 months",
+      logoScale: 1.25,
     },
+
     {
       id: 2,
-      title: "Task Management App",
+      title: "TripEasy",
       description:
-        "A collaborative task management application with real-time updates, team collaboration features, drag-and-drop functionality, and advanced project tracking capabilities.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      category: "frontend",
-      github: "#",
-      live: "#",
-      liveUrl: "https://example-tasks.com",
-      demoType: "tasks",
+        "A full-stack travel booking platform enabling users to browse destinations, book holiday packages, request customized itineraries, process secure payments, and generate automated invoices.",
+      image: "/tripeasy-logo.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Material UI",
+        "Payment Integration",
+      ],
+      category: "fullstack",
+      github: "https://github.com/alisproject111/tripeasy-client",
+      live: "https://tripeasy.in/",
+      liveUrl: "https://tripeasy.in/",
+      demoType: "travel",
       status: "Completed",
-      duration: "2 months",
+      logoScale: 1.4,
     },
+
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Scan Tap Pay",
       description:
-        "A responsive weather application with location-based forecasts, interactive charts, weather alerts, and beautiful data visualizations using modern APIs.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["JavaScript", "HTML5", "CSS3", "Weather API"],
-      category: "frontend",
-      github: "#",
-      live: "#",
-      liveUrl: "https://example-weather.com",
-      demoType: "weather",
+        "A contactless retail checkout solution allowing customers to scan QR codes or tap NFC tags to instantly add products to a digital cart, complete purchases, and receive digital invoices without waiting in checkout queues.",
+      image: "/scantappay-logo.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Razorpay",
+        "QR Technology",
+        "NFC",
+      ],
+      category: "fullstack",
+      github: "https://github.com/Abhishek05012004/stp",
+      live: "https://scantappay.flyanytrip.com/",
+      liveUrl: "https://scantappay.flyanytrip.com/",
+      demoType: "scanner",
       status: "Completed",
-      duration: "1 month",
+      logoScale: 1.0,
     },
+
     {
       id: 4,
-      title: "Blog API",
+      title: "ConvoChat",
       description:
-        "RESTful API for a modern blogging platform with JWT authentication, CRUD operations, data validation, file uploads, and comprehensive documentation.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-      category: "backend",
-      github: "#",
-      live: "#",
-      liveUrl: "https://api-example-blog.com",
-      demoType: "api",
+        "A real-time communication platform featuring instant messaging, file sharing, emoji support, password recovery, and peer-to-peer audio/video calling powered by WebRTC and Socket.io.",
+      image: "/chat-logo.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Socket.io",
+        "WebRTC",
+      ],
+      category: "fullstack",
+      github: "https://github.com/Abhishek05012004/chat-client",
+      live: "https://chat-client-pink-eight.vercel.app/",
+      liveUrl: "https://chat-client-pink-eight.vercel.app/",
+      demoType: "chat",
       status: "Completed",
-      duration: "1.5 months",
+      logoScale: 0.9,
     },
+
     {
       id: 5,
-      title: "Personal Portfolio",
+      title: "Employee Attendance System",
       description:
-        "A responsive portfolio website showcasing projects and skills with smooth animations, modern design, and optimized performance. Built with React and deployed on Vercel.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "CSS3", "JavaScript", "Vite"],
-      category: "frontend",
-      github: "https://github.com/abhishek/portfolio",
-      live: "https://abhishek-portfolio-delta-woad.vercel.app/",
-      liveUrl: "https://abhishek-portfolio-delta-woad.vercel.app/",
-      demoType: "portfolio",
-      status: "Live",
-      duration: "2 weeks",
+        "A biometric attendance and workforce management platform featuring AI-powered facial recognition, attendance tracking, leave management workflows, HR administration, and reporting dashboards.",
+      image: "/ems-logo.png",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Face Recognition",
+        "AI Integration",
+      ],
+      category: "fullstack",
+      github: "https://github.com/Abhishek05012004/employee-management-system",
+      live: "https://employee-management-system-client-umber.vercel.app/",
+      liveUrl: "https://employee-management-system-client-umber.vercel.app/",
+      demoType: "attendance",
+      status: "Completed",
+      logoScale: 1.35,
     },
+
     {
       id: 6,
-      title: "Chat Application",
+      title: "ShopEase",
       description:
-        "Real-time chat application with multiple rooms, user authentication, message history, file sharing, and emoji support using Socket.io for seamless communication.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
+        "A MERN-based e-commerce platform featuring product management, inventory tracking, admin dashboards, secure checkout, payment processing, email billing, and order management.",
+      image: "/shopease-logo.svg",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Cashfree Payment Gateway",
+      ],
       category: "fullstack",
-      github: "#",
-      live: "#",
-      liveUrl: "https://example-chat.com",
-      demoType: "chat",
-      status: "In Progress",
-      duration: "Ongoing",
+      github: "https://github.com/Abhishek05012004/shopease",
+      live: "https://shopease-client-two.vercel.app/",
+      liveUrl: "https://shopease-client-two.vercel.app/",
+      demoType: "ecommerce",
+      status: "Completed",
+      logoScale: 1.0,
     },
-  ]
+
+    {
+      id: 7,
+      title: "QuickMenu QR",
+      description:
+        "A digital restaurant menu platform that allows customers to scan table QR codes and instantly browse categorized menus, search items, filter dishes, and request waiter assistance directly from their phones.",
+      image: "/menu-logo.png",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "QR Technology",
+      ],
+      category: "frontend",
+      github: "https://github.com/Abhishek05012004/menu",
+      live: "https://menu-page-gold.vercel.app/",
+      liveUrl: "https://menu-page-gold.vercel.app/",
+      demoType: "menu",
+      status: "Completed",
+      logoScale: 1.4,
+    },
+
+    {
+      id: 8,
+      title: "QuickProfile QR",
+      description:
+        "A digital business card platform that generates unique QR-powered profile pages for employees and professionals, enabling instant access to contact details, social links, and personal information.",
+      image: "/profile-logo.png",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "QR Technology",
+      ],
+      category: "frontend",
+      github: "https://github.com/Abhishek05012004/profile",
+      live: "https://profile-card-iota-ten.vercel.app/",
+      liveUrl: "https://profile-card-iota-ten.vercel.app/",
+      demoType: "profile",
+      status: "Completed",
+      logoScale: 0.8,
+    },
+
+    {
+      id: 9,
+      title: "Optimech Solution",
+      description:
+        "A responsive corporate website for an industrial engineering and automation company featuring service showcases, inquiry forms, smooth navigation, and lead generation workflows.",
+      image: "/optimechsolution-logo.png",
+      technologies: [
+        "HTML5",
+        "JavaScript",
+        "Tailwind CSS",
+        "EmailJS",
+      ],
+      category: "frontend",
+      github: "https://github.com/ajha97575/optimech-solution",
+      live: "https://www.optimechsolution.in/",
+      liveUrl: "https://www.optimechsolution.in/",
+      demoType: "industrial",
+      status: "Completed",
+      logoScale: 1.35,
+    },
+  ];
 
   const filters = [
     { key: "all", label: "All Projects", icon: FolderOpen, count: projects.length },
@@ -162,208 +269,71 @@ const Projects = () => {
     }
   }
 
-  const renderLiveDemo = (demoType, title, liveUrl) => {
-    switch (demoType) {
-      case "portfolio":
-        return (
-          <div className="live-demo-container">
-            <iframe
-              src={liveUrl}
-              title={title}
-              frameBorder="0"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
-              loading="lazy"
-              onLoad={(e) => {
-                console.log("Iframe loaded successfully")
-              }}
-              onError={(e) => {
-                console.log("Iframe failed to load, showing fallback")
-                e.target.style.display = "none"
-                const fallback = e.target.parentNode.querySelector(".iframe-fallback")
-                if (fallback) {
-                  fallback.style.display = "flex"
-                }
-              }}
-            />
-            <div className="iframe-fallback">
-              <h4>
-                <Play size={16} />
-                {title}
-              </h4>
-              <p>Click below to view the live portfolio</p>
-              <button onClick={() => window.open(liveUrl, "_blank")}>Open Portfolio →</button>
-            </div>
-          </div>
-        )
-
-      case "ecommerce":
-        return (
-          <div className="live-demo-container demo-ecommerce">
-            <div className="demo-header">
-              <div className="demo-nav">
-                <span className="demo-logo">ShopEasy</span>
-                <div className="demo-menu">
-                  <span>Home</span>
-                  <span>Products</span>
-                  <span>Cart (2)</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="demo-hero">
-              <h3>Summer Sale - Up to 50% Off!</h3>
-              <p>Discover amazing deals on all categories</p>
-              <button className="demo-btn">Shop Now</button>
-            </div>
-
-            <div className="demo-products">
-              <div className="demo-product">
-                <div className="demo-product-img">Phone</div>
-                <h4>Smartphone</h4>
-                <p>$299.99</p>
-              </div>
-              <div className="demo-product">
-                <div className="demo-product-img">Laptop</div>
-                <h4>Laptop</h4>
-                <p>$899.99</p>
-              </div>
-              <div className="demo-product">
-                <div className="demo-product-img">Shirt</div>
-                <h4>T-Shirt</h4>
-                <p>$29.99</p>
-              </div>
-              <div className="demo-product">
-                <div className="demo-product-img">Shoes</div>
-                <h4>Sneakers</h4>
-                <p>$79.99</p>
-              </div>
-            </div>
-
-            <div className="demo-footer">
-              <p>© 2024 ShopEasy. Secure payments with Stripe.</p>
-            </div>
-          </div>
-        )
-
-      case "tasks":
-        return (
-          <div className="live-demo-container demo-tasks">
-            <div className="demo-task-board">
-              <div className="demo-task-header">
-                <span className="demo-task-title">Tasks To Do</span>
-                <button className="demo-add-task">+ Add</button>
-              </div>
-              <div className="demo-task-list">
-                <div className="demo-task-item">Design homepage mockup</div>
-                <div className="demo-task-item">Setup authentication</div>
-                <div className="demo-task-item completed">Create user stories</div>
-              </div>
-            </div>
-
-            <div className="demo-task-board">
-              <div className="demo-task-header">
-                <span className="demo-task-title">In Progress</span>
-                <button className="demo-add-task">+ Add</button>
-              </div>
-              <div className="demo-task-list">
-                <div className="demo-task-item">Implement real-time chat</div>
-                <div className="demo-task-item">Database optimization</div>
-              </div>
-            </div>
-
-            <div className="demo-task-board">
-              <div className="demo-task-header">
-                <span className="demo-task-title">Done</span>
-                <button className="demo-add-task">+ Add</button>
-              </div>
-              <div className="demo-task-list">
-                <div className="demo-task-item completed">Project setup</div>
-                <div className="demo-task-item completed">Team onboarding</div>
-                <div className="demo-task-item completed">Requirements gathering</div>
-              </div>
-            </div>
-          </div>
-        )
-
-      case "weather":
-        return (
-          <div className="live-demo-container demo-weather">
-            <div className="demo-weather-card">
-              <div className="demo-weather-location">Location: New York, NY</div>
-              <div className="demo-weather-temp">22°C</div>
-              <div className="demo-weather-desc">Sunny</div>
-              <div className="demo-weather-details">
-                <div>Humidity: 65%</div>
-                <div>Wind: 12 km/h</div>
-                <div>Pressure: 1013 hPa</div>
-                <div>UV Index: 6</div>
-              </div>
-            </div>
-
-            <div className="demo-forecast">
-              <h4>5-Day Forecast</h4>
-              <div className="demo-forecast-items">
-                <div>Mon: Sunny 24°</div>
-                <div>Tue: Cloudy 21°</div>
-                <div>Wed: Rainy 18°</div>
-                <div>Thu: Sunny 25°</div>
-                <div>Fri: Cloudy 23°</div>
-              </div>
-            </div>
-
-            <div className="demo-weather-card">
-              <div className="demo-weather-location">Location: London, UK</div>
-              <div className="demo-weather-temp">15°C</div>
-              <div className="demo-weather-desc">Light Rain</div>
-              <div className="demo-weather-details">
-                <div>Humidity: 85%</div>
-                <div>Wind: 8 km/h</div>
-                <div>Pressure: 1008 hPa</div>
-                <div>UV Index: 2</div>
-              </div>
-            </div>
-          </div>
-        )
-
-      default:
-        return (
-          <div
-            className="live-demo-container"
+  const renderLiveDemo = (title, liveUrl) => {
+    if (!liveUrl || liveUrl === "#") {
+      return (
+        <div
+          className="live-demo-container"
+          style={{
+            background: "linear-gradient(135deg, var(--gray-50) 0%, white 100%)",
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h4
             style={{
-              background: "linear-gradient(135deg, var(--gray-50) 0%, white 100%)",
-              padding: "20px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
+              color: "var(--primary)",
+              marginBottom: "10px",
+              fontSize: "0.9rem",
             }}
           >
-            <h4
-              style={{
-                color: "var(--primary)",
-                marginBottom: "10px",
-                fontSize: "0.9rem",
-              }}
-            >
-              <Play size={16} />
-              {title}
-            </h4>
-            <p
-              style={{
-                color: "var(--gray-600)",
-                fontSize: "0.7rem",
-                marginBottom: "15px",
-              }}
-            >
-              Interactive demo coming soon!
-            </p>
-            <button className="demo-btn" onClick={() => window.open(liveUrl, "_blank")}>
-              View Live Site
-            </button>
-          </div>
-        )
+            <Play size={16} />
+            {title}
+          </h4>
+          <p
+            style={{
+              color: "var(--gray-600)",
+              fontSize: "0.7rem",
+              marginBottom: "15px",
+            }}
+          >
+            Interactive demo coming soon!
+          </p>
+        </div>
+      )
     }
+
+    return (
+      <div className="live-demo-container">
+        <iframe
+          src={liveUrl}
+          title={title}
+          frameBorder="0"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+          loading="lazy"
+          onError={(e) => {
+            console.log("Iframe failed to load, showing fallback")
+            e.target.style.display = "none"
+            const fallback = e.target.parentNode.querySelector(".iframe-fallback")
+            if (fallback) {
+              fallback.style.display = "flex"
+            }
+          }}
+        />
+        <div className="iframe-fallback">
+          <h4>
+            <Play size={16} />
+            {title}
+          </h4>
+          <p>Click below to view the live site</p>
+          <button onClick={() => window.open(liveUrl, "_blank")}>Open Live Site →</button>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -421,7 +391,11 @@ const Projects = () => {
                 {/* Front of card */}
                 <div className="project-card-front">
                   <div className="project-image">
-                    <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      style={{ "--logo-scale": project.logoScale || 1.0 }}
+                    />
                     <div className="project-overlay">
                       <div className="project-links">
                         <a href={project.github} className="project-link github-link">
@@ -442,10 +416,6 @@ const Projects = () => {
                         }}
                       >
                         {project.status}
-                      </span>
-                      <span className="duration-badge">
-                        <Clock className="duration-icon" size={12} />
-                        {project.duration}
                       </span>
                     </div>
                   </div>
@@ -494,7 +464,7 @@ const Projects = () => {
                   <div className="laptop-container">
                     <div className="laptop-screen">
                       <div className="project-preview">
-                        {renderLiveDemo(project.demoType, project.title, project.liveUrl)}
+                        {renderLiveDemo(project.title, project.liveUrl)}
                       </div>
                     </div>
                     <div className="laptop-base"></div>
