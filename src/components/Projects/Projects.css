@@ -1092,6 +1092,11 @@
         display: none !important;
     }
 
+    .project-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .project-meta-container {
         display: flex;
         justify-content: space-between;
