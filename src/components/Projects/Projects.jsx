@@ -12,9 +12,141 @@ import {
 } from "lucide-react"
 import "./Projects.css"
 
+const LiveDemo = ({ title, liveUrl }) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+
+  if (!liveUrl || liveUrl === "#") {
+    return (
+      <div
+        className="live-demo-container"
+        style={{
+          background: "linear-gradient(135deg, var(--gray-50) 0%, white 100%)",
+          padding: "20px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          height: "100%",
+        }}
+      >
+        <h4
+          style={{
+            color: "var(--primary)",
+            marginBottom: "10px",
+            fontSize: "0.9rem",
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+          }}
+        >
+          <Play size={16} />
+          {title}
+        </h4>
+        <p
+          style={{
+            color: "var(--gray-600)",
+            fontSize: "0.75rem",
+            lineHeight: "1.4",
+            padding: "0 10px",
+          }}
+        >
+          Demo coming soon! I am actively working on finalizing this project. It will be live and interactive here once fully completed!
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="live-demo-container" style={{ position: "relative", width: "100%", height: "100%" }}>
+      {isLoading && (
+        <div
+          className="demo-loader"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "linear-gradient(135deg, var(--gray-50) 0%, white 100%)",
+            color: "var(--gray-700)",
+            zIndex: 10,
+          }}
+        >
+          <div
+            className="spinner"
+            style={{
+              width: "28px",
+              height: "28px",
+              border: "3px solid var(--gray-200)",
+              borderTop: "3px solid var(--primary)",
+              borderRadius: "50%",
+              animation: "spin 1s linear infinite",
+              marginBottom: "10px",
+            }}
+          />
+          <style>{`
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          `}</style>
+          <span style={{ fontSize: "0.75rem", fontWeight: "500", color: "var(--gray-600)" }}>
+            Connecting to Live Demo...
+          </span>
+        </div>
+      )}
+
+      {hasError ? (
+        <div className="iframe-fallback" style={{ display: "flex" }}>
+          <h4>
+            <Play size={16} />
+            {title}
+          </h4>
+          <p>Demo connection failed. You can still view it live in a new window!</p>
+          <button onClick={() => window.open(liveUrl, "_blank")}>Open Live Site →</button>
+        </div>
+      ) : (
+        <>
+          <iframe
+            src={liveUrl}
+            title={title}
+            frameBorder="0"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+            loading="lazy"
+            onLoad={() => setIsLoading(false)}
+            onError={() => {
+              setHasError(true)
+              setIsLoading(false)
+            }}
+            style={{
+              opacity: isLoading ? 0 : 1,
+              transition: "opacity 0.3s ease",
+            }}
+          />
+          <div className="iframe-fallback">
+            <h4>
+              <Play size={16} />
+              {title}
+            </h4>
+            <p>Click below to view the live site</p>
+            <button onClick={() => window.open(liveUrl, "_blank")}>Open Live Site →</button>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all")
   const [flippedCards, setFlippedCards] = useState(new Set())
+  const [renderedDemos, setRenderedDemos] = useState(new Set())
 
   const projects = [
     {
@@ -246,6 +378,7 @@ const Projects = () => {
 
   const handleLiveClick = (projectId) => {
     setFlippedCards((prev) => new Set([...prev, projectId]))
+    setRenderedDemos((prev) => new Set([...prev, projectId]))
   }
 
   const handleFlipBack = (projectId) => {
@@ -269,72 +402,7 @@ const Projects = () => {
     }
   }
 
-  const renderLiveDemo = (title, liveUrl) => {
-    if (!liveUrl || liveUrl === "#") {
-      return (
-        <div
-          className="live-demo-container"
-          style={{
-            background: "linear-gradient(135deg, var(--gray-50) 0%, white 100%)",
-            padding: "20px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-          }}
-        >
-          <h4
-            style={{
-              color: "var(--primary)",
-              marginBottom: "10px",
-              fontSize: "0.9rem",
-            }}
-          >
-            <Play size={16} />
-            {title}
-          </h4>
-          <p
-            style={{
-              color: "var(--gray-600)",
-              fontSize: "0.7rem",
-              marginBottom: "15px",
-            }}
-          >
-            Interactive demo coming soon!
-          </p>
-        </div>
-      )
-    }
 
-    return (
-      <div className="live-demo-container">
-        <iframe
-          src={liveUrl}
-          title={title}
-          frameBorder="0"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
-          loading="lazy"
-          onError={(e) => {
-            console.log("Iframe failed to load, showing fallback")
-            e.target.style.display = "none"
-            const fallback = e.target.parentNode.querySelector(".iframe-fallback")
-            if (fallback) {
-              fallback.style.display = "flex"
-            }
-          }}
-        />
-        <div className="iframe-fallback">
-          <h4>
-            <Play size={16} />
-            {title}
-          </h4>
-          <p>Click below to view the live site</p>
-          <button onClick={() => window.open(liveUrl, "_blank")}>Open Live Site →</button>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <section id="projects" className="projects section-padding">
@@ -491,7 +559,9 @@ const Projects = () => {
                   >
                     <div className="laptop-screen">
                       <div className="project-preview">
-                        {renderLiveDemo(project.title, project.liveUrl)}
+                        {renderedDemos.has(project.id) && (
+                          <LiveDemo title={project.title} liveUrl={project.liveUrl} />
+                        )}
                       </div>
                     </div>
                     <div className="laptop-base"></div>
