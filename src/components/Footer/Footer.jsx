@@ -7,7 +7,7 @@ import {
   Home,
   Github,
   Linkedin,
-  Twitter,
+  Instagram,
   FolderOpen,
   Mail,
   Bookmark,
@@ -67,21 +67,21 @@ const Footer = () => {
               </h4>
               <ul>
                 <li>
-                  <a href="https://github.com/Abhishek05012004">
+                  <a href="https://github.com/Abhishek05012004" target="_blank" rel="noopener noreferrer">
                     <Github className="link-icon" size={14} />
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/">
+                  <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="link-icon" size={14} />
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="https://x.com/Abhishek_272003">
-                    <Twitter className="link-icon" size={14} />
-                    Twitter
+                  <a href="https://www.instagram.com/abhishek_jha_7/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="link-icon" size={14} />
+                    Instagram
                   </a>
                 </li>
               </ul>

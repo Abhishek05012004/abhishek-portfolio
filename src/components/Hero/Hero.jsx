@@ -112,11 +112,11 @@ const Hero = () => {
                       MERN Stack Developer
                     </p>
                     <div className="social-links">
-                      <a href="https://github.com/Abhishek05012004" className="social-link">
+                      <a href="https://github.com/Abhishek05012004" target="_blank" rel="noopener noreferrer" className="social-link">
                         <Github className="social-icon" size={16} />
                         <span>GitHub</span>
                       </a>
-                      <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" className="social-link">
+                      <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <Linkedin className="social-icon" size={16} />
                         <span>LinkedIn</span>
                       </a>

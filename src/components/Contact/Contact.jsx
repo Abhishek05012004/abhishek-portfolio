@@ -10,6 +10,7 @@ import {
   Instagram,
   User,
   Send,
+  Loader2,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useToast } from "../../context/ToastContext";
@@ -21,6 +22,7 @@ const PUBLIC_KEY = "nt77tX0lrt1MQ4Rzz"; // e.g., "OAbcD_1XyZ..."
 
 const Contact = () => {
   const { showToast } = useToast();
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,6 +39,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
@@ -47,6 +50,9 @@ const Contact = () => {
       .catch((err) => {
         console.error("Failed to send message:", err);
         showToast("Failed to send message. Please try again.", "error");
+      })
+      .finally(() => {
+        setIsSending(false);
       });
   };
 
@@ -107,7 +113,13 @@ const Contact = () => {
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
-                    <a key={index} href={info.link} className="contact-method">
+                    <a
+                      key={index}
+                      href={info.link}
+                      className="contact-method"
+                      target={info.link.startsWith("http") ? "_blank" : undefined}
+                      rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                    >
                       <div className="method-icon">
                         <IconComponent size={20} />
                       </div>
@@ -121,21 +133,21 @@ const Contact = () => {
               </div>
 
               <div className="social-links">
-                <a href="https://github.com/Abhishek05012004" className="social-link github">
+                <a href="https://github.com/Abhishek05012004" target="_blank" rel="noopener noreferrer" className="social-link github">
                   <Github className="social-icon" size={16} />
                   <span>GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" className="social-link linkedin">
+                <a href="https://www.linkedin.com/in/abhishek-jha-35732230a/" target="_blank" rel="noopener noreferrer" className="social-link linkedin">
                   <Linkedin className="social-icon" size={16} />
                   <span>LinkedIn</span>
                 </a>
-                <a href="https://x.com/Abhishek_272003" className="social-link twitter">
-                  <Twitter className="social-icon" size={16} />
-                  <span>Twitter</span>
-                </a>
-                <a href="https://www.instagram.com/abhishek_jha_7/" className="social-link instagram">
+                <a href="https://www.instagram.com/abhishek_jha_7/" target="_blank" rel="noopener noreferrer" className="social-link instagram">
                   <Instagram className="social-icon" size={16} />
                   <span>Instagram</span>
+                </a>
+                <a href="https://x.com/Abhishek_272003" target="_blank" rel="noopener noreferrer" className="social-link twitter">
+                  <Twitter className="social-icon" size={16} />
+                  <span>Twitter</span>
                 </a>
               </div>
             </div>
@@ -187,9 +199,18 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">
-                <Send className="btn-icon" size={16} />
-                Send Message
+              <button type="submit" className="submit-btn" disabled={isSending}>
+                {isSending ? (
+                  <>
+                    <Loader2 className="btn-icon spinner" size={16} />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="btn-icon" size={16} />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>

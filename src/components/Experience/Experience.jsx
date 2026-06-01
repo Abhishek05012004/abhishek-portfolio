@@ -66,7 +66,6 @@ const Experience = () => {
         "Built responsive user interfaces with React.js and modern CSS",
         "Created RESTful APIs using Node.js and Express.js under mentorship",
         "Worked with MongoDB for database design and basic query optimization",
-        "Collaborated with senior developers on client projects",
         "Learned industry-standard authentication and authorization systems",
       ],
       technologies: [
@@ -79,8 +78,6 @@ const Experience = () => {
         "CSS3",
       ],
       achievements: [
-        "Successfully delivered all assigned client projects",
-        "Improved application performance by 25%",
         "Implemented responsive designs for mobile compatibility",
       ],
     },
@@ -93,7 +90,6 @@ const Experience = () => {
       description: [
         "Built multiple full-stack web applications from scratch",
         "Learned modern web development technologies and frameworks",
-        "Practiced problem-solving through coding challenges",
         "Created responsive and interactive user interfaces",
         "Implemented various authentication and database solutions",
         "Deployed applications using modern hosting platforms",

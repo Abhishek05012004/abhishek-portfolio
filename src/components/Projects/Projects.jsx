@@ -114,7 +114,7 @@ const Projects = () => {
 
     {
       id: 5,
-      title: "Employee Attendance System",
+      title: "Employee Management System",
       description:
         "A biometric attendance and workforce management platform featuring AI-powered facial recognition, attendance tracking, leave management workflows, HR administration, and reporting dashboards.",
       image: "/ems-logo.png",
@@ -159,14 +159,14 @@ const Projects = () => {
 
     {
       id: 7,
-      title: "QuickMenu QR",
+      title: "SmartMenu",
       description:
-        "A digital restaurant menu platform that allows customers to scan table QR codes and instantly browse categorized menus, search items, filter dishes, and request waiter assistance directly from their phones.",
+        "A digital restaurant menu website designed for QR-based access. Restaurants can place a QR code linked to their menu URL on tables, allowing customers to instantly browse categorized dishes, search menu items, filter food preferences, and request waiter assistance directly from their phones.",
       image: "/menu-logo.png",
       technologies: [
         "React",
         "Tailwind CSS",
-        "QR Technology",
+        "Responsive Design",
       ],
       category: "frontend",
       github: "https://github.com/Abhishek05012004/menu",
@@ -179,14 +179,14 @@ const Projects = () => {
 
     {
       id: 8,
-      title: "QuickProfile QR",
+      title: "Digital Profile Card",
       description:
-        "A digital business card platform that generates unique QR-powered profile pages for employees and professionals, enabling instant access to contact details, social links, and personal information.",
+        "A digital profile and business card website that provides a unique URL for each employee or professional. When the profile URL is linked to a QR code on an ID card or visiting card, users can instantly access contact details, social media links, and professional information by scanning the code.",
       image: "/profile-logo.png",
       technologies: [
         "React",
         "Tailwind CSS",
-        "QR Technology",
+        "Responsive Design",
       ],
       category: "frontend",
       github: "https://github.com/Abhishek05012004/profile",
@@ -222,23 +222,25 @@ const Projects = () => {
   const filters = [
     { key: "all", label: "All Projects", icon: FolderOpen, count: projects.length },
     {
+      key: "fullstack",
+      label: "Full Stack",
+      icon: Wrench,
+      count: projects.filter((p) => p.category === "fullstack").length,
+    },
+    {
       key: "frontend",
       label: "Frontend",
       icon: Palette,
       count: projects.filter((p) => p.category === "frontend").length,
     },
+    /*
     {
       key: "backend",
       label: "Backend",
       icon: Server,
       count: projects.filter((p) => p.category === "backend").length,
     },
-    {
-      key: "fullstack",
-      label: "Full Stack",
-      icon: Wrench,
-      count: projects.filter((p) => p.category === "fullstack").length,
-    },
+    */
   ]
 
   const filteredProjects =
@@ -398,7 +400,7 @@ const Projects = () => {
                     />
                     <div className="project-overlay">
                       <div className="project-links">
-                        <a href={project.github} className="project-link github-link">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">
                           <Github className="link-icon" size={16} />
                           <span>GitHub</span>
                         </a>
@@ -423,13 +425,23 @@ const Projects = () => {
                   <div className="project-content">
                     <div className="project-header">
                       <h3 className="project-title">{project.title}</h3>
-                      <div className="project-category">
-                        <span className="category-icon">
-                          {project.category === "frontend" && <Palette size={14} />}
-                          {project.category === "backend" && <Server size={14} />}
-                          {project.category === "fullstack" && <Wrench size={14} />}
+                      <div className="project-meta-container">
+                        <div className="project-category">
+                          <span className="category-icon">
+                            {project.category === "frontend" && <Palette size={14} />}
+                            {project.category === "backend" && <Server size={14} />}
+                            {project.category === "fullstack" && <Wrench size={14} />}
+                          </span>
+                          <span className="category-text">{project.category}</span>
+                        </div>
+                        <span
+                          className="status-badge-mobile"
+                          style={{
+                            backgroundColor: getStatusColor(project.status),
+                          }}
+                        >
+                          {project.status}
                         </span>
-                        <span className="category-text">{project.category}</span>
                       </div>
                     </div>
 
@@ -447,6 +459,17 @@ const Projects = () => {
                           </span>
                         ))}
                       </div>
+                    </div>
+
+                    <div className="project-mobile-links">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-mobile-link github-link">
+                        <Github className="link-icon" size={16} />
+                        <span>GitHub</span>
+                      </a>
+                      <button className="project-mobile-link demo-link" onClick={() => handleLiveClick(project.id)}>
+                        <Play className="link-icon" size={16} />
+                        <span>Live Demo</span>
+                      </button>
                     </div>
                   </div>
                 </div>

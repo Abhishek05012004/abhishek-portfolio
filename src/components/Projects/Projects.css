@@ -428,6 +428,20 @@
     font-size: 0.9rem;
 }
 
+.project-meta-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-badge-mobile {
+    display: none;
+}
+
+.project-mobile-links {
+    display: none;
+}
+
 .project-description {
     color: var(--gray-600);
     line-height: 1.6;
@@ -437,8 +451,8 @@
 }
 
 .project-technologies {
-    margin-top: 25px;
-    margin-bottom: auto;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 .tech-header {
@@ -1034,7 +1048,7 @@
     }
 
     .laptop-screen {
-        height: 200px;
+        height: 230px;
         /* Increased from original 160px, but less than desktop */
     }
 
@@ -1068,6 +1082,73 @@
     .laptop-container {
         max-width: 320px;
         /* Back to original width */
+    }
+
+    .project-badges {
+        display: none !important;
+    }
+
+    .project-overlay {
+        display: none !important;
+    }
+
+    .project-meta-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .status-badge-mobile {
+        display: inline-block;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-mobile-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .project-mobile-link {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .project-mobile-link.github-link {
+        background: var(--gray-900);
+        color: var(--white);
+        border: 1px solid var(--gray-300);
+    }
+
+    .project-mobile-link.demo-link {
+        background: var(--primary);
+        color: white;
+    }
+
+    .project-mobile-link:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
     }
 }
 
@@ -1227,7 +1308,7 @@
     }
 
     .laptop-screen {
-        height: 160px;
+        height: 200px;
         /* Increased from original 140px, but keeping width smaller */
     }
 
@@ -1355,7 +1436,7 @@
     }
 
     .laptop-screen {
-        height: 140px;
+        height: 175px;
     }
 
     .filter-btn {
@@ -1367,12 +1448,20 @@
 @media (max-width: 480px) {
 
     .project-card:has(img[alt="ShopEase"]) .project-image img,
-    .project-card:has(img[alt="QuickProfile QR"]) .project-image img {
-        transform: scale(calc(var(--logo-scale, 1) * 0.85));
+    .project-card:has(img[alt="QuickProfile QR"]) .project-image img,
+    .project-card:has(img[alt="Biology Trunk"]) .project-image img,
+    .project-card:has(img[alt="Scan Tap Pay"]) .project-image img,
+    .project-card:has(img[alt="ConvoChat"]) .project-image img,
+    .project-card:has(img[alt="Optimech Solution"]) .project-image img {
+        transform: scale(calc(var(--logo-scale, 1) * 0.75));
     }
 
     .project-card:has(img[alt="ShopEase"]):hover .project-image img,
-    .project-card:has(img[alt="QuickProfile QR"]):hover .project-image img {
-        transform: scale(calc(var(--logo-scale, 1) * 0.85 * 1.08));
+    .project-card:has(img[alt="QuickProfile QR"]):hover .project-image img,
+    .project-card:has(img[alt="Biology Trunk"]):hover .project-image img,
+    .project-card:has(img[alt="Scan Tap Pay"]):hover .project-image img,
+    .project-card:has(img[alt="ConvoChat"]):hover .project-image img,
+    .project-card:has(img[alt="Optimech Solution"]):hover .project-image img {
+        transform: scale(calc(var(--logo-scale, 1) * 0.75 * 1.08));
     }
 }

@@ -1,6 +1,6 @@
 .toast-container {
   position: fixed;
-  bottom: 24px;
+  top: 24px;
   right: 24px;
   z-index: 9999;
   display: flex;
@@ -103,7 +103,7 @@
 /* Mobile responsive */
 @media (max-width: 480px) {
   .toast-container {
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     left: 20px;
   }
@@ -115,7 +115,7 @@
   @keyframes slideInRight {
     from {
       opacity: 0;
-      transform: translateY(100%) scale(0.9);
+      transform: translateY(-100%) scale(0.9);
     }
 
     to {
@@ -132,7 +132,7 @@
 
     to {
       opacity: 0;
-      transform: translateY(100%) scale(0.9);
+      transform: translateY(-100%) scale(0.9);
     }
   }
 }
