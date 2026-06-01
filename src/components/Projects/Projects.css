@@ -514,6 +514,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    overscroll-behavior: contain;
 }
 
 .laptop-base {
@@ -547,6 +548,8 @@
     background: var(--white);
     overflow: hidden;
     position: relative;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-preview::-webkit-scrollbar {
@@ -572,6 +575,8 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .live-demo-container iframe {
@@ -587,6 +592,7 @@
     /* Adjusted ratio: 100/0.35 */
     height: 285.71%;
     /* Adjusted ratio: 100/0.35 */
+    overscroll-behavior: contain;
 }
 
 .iframe-fallback {

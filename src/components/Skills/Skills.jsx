@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Settings, Palette, Server, Wrench } from "lucide-react";
 import "./Skills.css";

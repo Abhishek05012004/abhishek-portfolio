@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Home, User, Settings, Briefcase, FolderOpen, Mail, Sun, Moon } from "lucide-react"
 import { useTheme } from "../../context/ThemeContext"

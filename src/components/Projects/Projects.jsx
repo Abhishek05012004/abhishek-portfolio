@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import {
   FolderOpen,
@@ -484,7 +482,13 @@ const Projects = () => {
                     <p>Live Interactive Demo</p>
                   </div>
 
-                  <div className="laptop-container">
+                  <div
+                    className="laptop-container"
+                    onTouchStart={(e) => e.stopPropagation()}
+                    onTouchMove={(e) => e.stopPropagation()}
+                    onTouchEnd={(e) => e.stopPropagation()}
+                    onWheel={(e) => e.stopPropagation()}
+                  >
                     <div className="laptop-screen">
                       <div className="project-preview">
                         {renderLiveDemo(project.title, project.liveUrl)}
