@@ -51,9 +51,7 @@ const Navbar = () => {
       <div className="container">
         <div className="nav-content">
           <div className="logo">
-            <span className="logo-icon">&lt;/&gt;</span>
-            <span className="logo-text">Abhishek</span>
-            <span className="logo-dot">.</span>
+            <span className="logo-text">&lt;Abhishek/&gt;</span>
           </div>
 
           <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
