@@ -256,17 +256,18 @@ const Skills = () => {
         color: "#000000",
       },
       {
-        name: "ChatGPT",
-        level: 90,
+        name: "Render",
+        level: 80,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg"
-            alt="ChatGPT"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/render.svg"
+            alt="Render"
             className="tech-logo"
+            style={{ filter: "invert(1)" }}
           />
         ),
-        description: "Expert",
-        color: "#10A37F",
+        description: "Advanced",
+        color: "#46E3B7",
       },
     ],
   };
