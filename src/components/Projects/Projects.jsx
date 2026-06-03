@@ -347,6 +347,29 @@ const Projects = () => {
       status: "Completed",
       logoScale: 1.35,
     },
+    {
+      id: 10, // Adjust this ID based on your projects list order
+      title: "FlyAnyTrip",
+      description:
+        "A full-stack travel booking platform enabling users to search and book flights, hotels, and holiday packages, featuring interactive seat selection, Razorpay payment gateway integration, comprehensive user dashboards, and automated e-ticket generation.",
+      image: "/anytrip-logo.png", // Adjust logo filename/path as needed
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Razorpay Payment Gateway",
+      ],
+      category: "fullstack",
+      github: "https://github.com/alispatel111/flyanytrip-frontend",
+      live: "https://flyanytrip-frontend.vercel.app", // Adjust if your live client URL is different
+      liveUrl: "https://flyanytrip-frontend.vercel.app",
+      demoType: "travel",
+      status: "Live",
+      logoScale: 1.0,
+    },
+
   ];
 
   const filters = [
