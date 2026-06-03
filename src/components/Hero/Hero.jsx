@@ -45,9 +45,8 @@ const Hero = () => {
   }, [charIndex, isDeleting, roleIndex, roles]);
 
   const handleDownloadResume = () => {
-    // Create a dummy resume download - replace with your actual resume URL
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Replace with your actual resume path
+    link.href = "/Abhishek_Jha_Resume.pdf";
     link.download = "Abhishek_Jha_Resume.pdf";
     document.body.appendChild(link);
     link.click();
