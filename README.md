@@ -4,7 +4,7 @@ A modern, responsive, and dynamic personal portfolio website built with React, V
 
 ## 🚀 Live Demo
 
-[Link to Live Demo (if applicable)](#)
+[Link to Live Demo](https://abhishekjha27.vercel.app)
 
 ---
 
@@ -88,14 +88,4 @@ npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
 
-### 5. Build for production
-```bash
-npm run build
-```
-The output files will be generated in the `dist/` directory, ready to be deployed to platforms like GitHub Pages, Vercel, Netlify, or Hostinger.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
