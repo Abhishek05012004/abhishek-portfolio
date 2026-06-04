@@ -92,7 +92,7 @@
     transition: all 0.3s ease;
     position: relative;
     font-size: 0.85rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
