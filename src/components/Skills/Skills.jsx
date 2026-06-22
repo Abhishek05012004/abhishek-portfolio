@@ -41,6 +41,33 @@ const Skills = () => {
         color: "#61DAFB",
       },
       {
+        name: "Next.js",
+        level: 80,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+            className="tech-logo"
+            style={{ filter: "invert(1)" }}
+          />
+        ),
+        description: "Advanced",
+        color: "#000000",
+      },
+      {
+        name: "TypeScript",
+        level: 80,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            className="tech-logo"
+          />
+        ),
+        description: "Advanced",
+        color: "#3178C6",
+      },
+      {
         name: "JavaScript",
         level: 85,
         icon: (
@@ -54,43 +81,17 @@ const Skills = () => {
         color: "#F7DF1E",
       },
       {
-        name: "HTML5",
-        level: 90,
+        name: "Redux Toolkit",
+        level: 75,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            alt="HTML5"
-            className="tech-logo"
-          />
-        ),
-        description: "Expert",
-        color: "#E34F26",
-      },
-      {
-        name: "CSS3",
-        level: 85,
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-            alt="CSS3"
-            className="tech-logo"
-          />
-        ),
-        description: "Advanced",
-        color: "#1572B6",
-      },
-      {
-        name: "TypeScript",
-        level: 70,
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+            alt="Redux Toolkit"
             className="tech-logo"
           />
         ),
         description: "Intermediate",
-        color: "#3178C6",
+        color: "#764ABC",
       },
       {
         name: "Tailwind CSS",
@@ -135,6 +136,19 @@ const Skills = () => {
         color: "#000000",
       },
       {
+        name: "REST APIs",
+        level: 90,
+        icon: (
+          <img
+            src="https://img.icons8.com/fluency/48/api-settings.png"
+            alt="REST APIs"
+            className="tech-logo"
+          />
+        ),
+        description: "Expert",
+        color: "#FF6B35",
+      },
+      {
         name: "MongoDB",
         level: 85,
         icon: (
@@ -149,7 +163,7 @@ const Skills = () => {
       },
       {
         name: "PostgreSQL",
-        level: 65,
+        level: 75,
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
@@ -159,19 +173,6 @@ const Skills = () => {
         ),
         description: "Intermediate",
         color: "#336791",
-      },
-      {
-        name: "REST APIs",
-        level: 90,
-        icon: (
-          <img
-            src="https://img.icons8.com/fluency/48/api-settings.png"
-            alt="REST APIs"
-            className="tech-logo"
-          />
-        ),
-        description: "Expert",
-        color: "#FF6B35",
       },
       {
         name: "JWT",
@@ -216,19 +217,6 @@ const Skills = () => {
         color: "#000000",
       },
       {
-        name: "VS Code",
-        level: 95,
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-            alt="VS Code"
-            className="tech-logo"
-          />
-        ),
-        description: "Expert",
-        color: "#007ACC",
-      },
-      {
         name: "Postman",
         level: 85,
         icon: (
@@ -240,6 +228,19 @@ const Skills = () => {
         ),
         description: "Advanced",
         color: "#FF6C37",
+      },
+      {
+        name: "Docker",
+        level: 75,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+            className="tech-logo"
+          />
+        ),
+        description: "Intermediate",
+        color: "#2496ED",
       },
       {
         name: "Vercel",
@@ -310,7 +311,9 @@ const Skills = () => {
                   {category === "backend" && <Server size={20} />}
                   {category === "tools" && <Wrench size={20} />}
                 </span>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {category === "tools"
+                  ? "Tools & Deployment"
+                  : category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
             ))}
           </div>
