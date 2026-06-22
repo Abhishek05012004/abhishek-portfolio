@@ -289,6 +289,27 @@ const Projects = () => {
 
     {
       id: 7,
+      title: "Optimech Solution",
+      description:
+        "A responsive corporate website for an industrial engineering and automation company featuring service showcases, inquiry forms, smooth navigation, and lead generation workflows.",
+      image: "/optimechsolution-logo.png",
+      technologies: [
+        "HTML5",
+        "JavaScript",
+        "Tailwind CSS",
+        "EmailJS",
+      ],
+      category: "frontend",
+      github: "https://github.com/ajha97575/optimech-solution",
+      live: "https://www.optimechsolution.in/",
+      liveUrl: "https://www.optimechsolution.in/",
+      demoType: "industrial",
+      status: "Completed",
+      logoScale: 1.35,
+    },
+
+    {
+      id: 8,
       title: "SmartMenu",
       description:
         "A digital restaurant menu website designed for QR-based access. Restaurants can place a QR code linked to their menu URL on tables, allowing customers to instantly browse categorized dishes, search menu items, filter food preferences, and request waiter assistance directly from their phones.",
@@ -308,7 +329,7 @@ const Projects = () => {
     },
 
     {
-      id: 8,
+      id: 9,
       title: "Digital Profile Card",
       description:
         "A digital profile and business card website that provides a unique URL for each employee or professional. When the profile URL is linked to a QR code on an ID card or visiting card, users can instantly access contact details, social media links, and professional information by scanning the code.",
@@ -325,27 +346,6 @@ const Projects = () => {
       demoType: "profile",
       status: "Completed",
       logoScale: 0.8,
-    },
-
-    {
-      id: 9,
-      title: "Optimech Solution",
-      description:
-        "A responsive corporate website for an industrial engineering and automation company featuring service showcases, inquiry forms, smooth navigation, and lead generation workflows.",
-      image: "/optimechsolution-logo.png",
-      technologies: [
-        "HTML5",
-        "JavaScript",
-        "Tailwind CSS",
-        "EmailJS",
-      ],
-      category: "frontend",
-      github: "https://github.com/ajha97575/optimech-solution",
-      live: "https://www.optimechsolution.in/",
-      liveUrl: "https://www.optimechsolution.in/",
-      demoType: "industrial",
-      status: "Completed",
-      logoScale: 1.35,
     },
     {
       id: 10, // Adjust this ID based on your projects list order
