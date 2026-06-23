@@ -80,6 +80,9 @@
 .link-group ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .link-group li {
